@@ -1,5 +1,5 @@
 // components/Login.js
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const Login = ({ login }) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
