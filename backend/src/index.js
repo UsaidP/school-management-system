@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
+
 import { app } from "./app.js";
+import routes from "./routes/users/user.routes.js";
 
 dotenv.config({
   path: "./.env",
@@ -8,6 +10,7 @@ dotenv.config({
 
 const port = 3000 || process.env.PORT;
 
+app.use("/api/students", routes);
 connectDB()
   .then(() => {
     app.listen(port, () => {
